@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Gallery Demo</p>
+        <h1>Responsive Image Gallery</h1>
+        <p>Browse categories, hover for preview effects, and view full-screen images with smooth navigation.</p>
+      </div>
+      <div class="controls">
+        <div class="filter-bar" role="toolbar" aria-label="Image categories">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="nature">Nature</button>
+          <button class="filter-btn" data-filter="architecture">Architecture</button>
+          <button class="filter-btn" data-filter="people">People</button>
+          <button class="filter-btn" data-filter="abstract">Abstract</button>
+        </div>
+        <div class="nav-buttons">
+          <button id="prevBtn" class="nav-btn" aria-label="Previous image">Prev</button>
+          <button id="nextBtn" class="nav-btn" aria-label="Next image">Next</button>
+        </div>
+        <div class="action-row">
+          <label class="filter-select" for="effectSelect">
+            <span>Image effect</span>
+            <select id="effectSelect">
+              <option value="none">Natural</option>
+              <option value="grayscale">Grayscale</option>
+              <option value="sepia">Sepia</option>
+              <option value="contrast">High Contrast</option>
+              <option value="hue">Cool Hue</option>
+            </select>
+          </label>
+          <button id="autoPlayBtn" class="nav-btn" aria-pressed="false">Start Slideshow</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="gallery" id="gallery">
+      <article class="gallery-item" data-category="nature" data-title="Gallery 1" tabindex="0">
+        <img src="images/image-1.jpg" alt="Gallery 1" />
+        <div class="overlay"><p>Gallery 1</p></div>
+      </article>
+      <article class="gallery-item" data-category="architecture" data-title="Gallery 2" tabindex="0">
+        <img src="images/image-2.jpg" alt="Gallery 2" />
+        <div class="overlay"><p>Gallery 2</p></div>
+      </article>
+      <article class="gallery-item" data-category="people" data-title="Gallery 3" tabindex="0">
+        <img src="images/image-3.jpg" alt="Gallery 3" />
+        <div class="overlay"><p>Gallery 3</p></div>
+      </article>
+      <article class="gallery-item" data-category="abstract" data-title="Gallery 4" tabindex="0">
+        <img src="images/image-4.jpg" alt="Gallery 4" />
+        <div class="overlay"><p>Gallery 4</p></div>
+      </article>
+      <article class="gallery-item" data-category="nature" data-title="Gallery 5" tabindex="0">
+        <img src="images/image-5.jpg" alt="Gallery 5" />
+        <div class="overlay"><p>Gallery 5</p></div>
+      </article>
+      <article class="gallery-item" data-category="architecture" data-title="Gallery 6" tabindex="0">
+        <img src="images/image-6.jpg" alt="Gallery 6" />
+        <div class="overlay"><p>Gallery 6</p></div>
+      </article>
+      <article class="gallery-item" data-category="people" data-title="Gallery 7" tabindex="0">
+        <img src="images/image-7.jpg" alt="Gallery 7" />
+        <div class="overlay"><p>Gallery 7</p></div>
+      </article>
+      <article class="gallery-item" data-category="abstract" data-title="Gallery 8" tabindex="0">
+        <img src="images/image-8.jpg" alt="Gallery 8" />
+        <div class="overlay"><p>Gallery 8</p></div>
+      </article>
+      <article class="gallery-item" data-category="nature" data-title="Gallery 9" tabindex="0">
+        <img src="images/image-9.jpg" alt="Gallery 9" />
+        <div class="overlay"><p>Gallery 9</p></div>
+      </article>
+      <article class="gallery-item" data-category="architecture" data-title="Gallery 10" tabindex="0">
+        <img src="images/image-10.jpg" alt="Gallery 10" />
+        <div class="overlay"><p>Gallery 10</p></div>
+      </article>
+      <article class="gallery-item" data-category="people" data-title="Gallery 11" tabindex="0">
+        <img src="images/image-11.jpg" alt="Gallery 11" />
+        <div class="overlay"><p>Gallery 11</p></div>
+      </article>
+      <article class="gallery-item" data-category="abstract" data-title="Gallery 12" tabindex="0">
+        <img src="images/image-12.jpg" alt="Gallery 12" />
+        <div class="overlay"><p>Gallery 12</p></div>
+      </article>
+      <article class="gallery-item" data-category="nature" data-title="Gallery 13" tabindex="0">
+        <img src="images/image-13.jpg" alt="Gallery 13" />
+        <div class="overlay"><p>Gallery 13</p></div>
+      </article>
+      <article class="gallery-item" data-category="architecture" data-title="Gallery 14" tabindex="0">
+        <img src="images/image-14.jpg" alt="Gallery 14" />
+        <div class="overlay"><p>Gallery 14</p></div>
+      </article>
+      <article class="gallery-item" data-category="people" data-title="Gallery 15" tabindex="0">
+        <img src="images/image-15.jpg" alt="Gallery 15" />
+        <div class="overlay"><p>Gallery 15</p></div>
+      </article>
+      <article class="gallery-item" data-category="abstract" data-title="Gallery 16" tabindex="0">
+        <img src="images/image-16.jpg" alt="Gallery 16" />
+        <div class="overlay"><p>Gallery 16</p></div>
+      </article>
+      <article class="gallery-item" data-category="nature" data-title="Gallery 17" tabindex="0">
+        <img src="images/image-17.jpg" alt="Gallery 17" />
+        <div class="overlay"><p>Gallery 17</p></div>
+      </article>
+      <article class="gallery-item" data-category="architecture" data-title="Gallery 18" tabindex="0">
+        <img src="images/image-18.jpg" alt="Gallery 18" />
+        <div class="overlay"><p>Gallery 18</p></div>
+      </article>
+      <article class="gallery-item" data-category="people" data-title="Gallery 19" tabindex="0">
+        <img src="images/image-19.jpg" alt="Gallery 19" />
+        <div class="overlay"><p>Gallery 19</p></div>
+      </article>
+      <article class="gallery-item" data-category="abstract" data-title="Gallery 20" tabindex="0">
+        <img src="images/image-20.jpg" alt="Gallery 20" />
+        <div class="overlay"><p>Gallery 20</p></div>
+      </article>
+      <article class="gallery-item" data-category="nature" data-title="Gallery 21" tabindex="0">
+        <img src="images/image-21.jpg" alt="Gallery 21" />
+        <div class="overlay"><p>Gallery 21</p></div>
+      </article>
+      <article class="gallery-item" data-category="architecture" data-title="Gallery 22" tabindex="0">
+        <img src="images/image-22.jpg" alt="Gallery 22" />
+        <div class="overlay"><p>Gallery 22</p></div>
+      </article>
+      <article class="gallery-item" data-category="people" data-title="Gallery 23" tabindex="0">
+        <img src="images/image-23.jpg" alt="Gallery 23" />
+        <div class="overlay"><p>Gallery 23</p></div>
+      </article>
+      <article class="gallery-item" data-category="abstract" data-title="Gallery 24" tabindex="0">
+        <img src="images/image-24.jpg" alt="Gallery 24" />
+        <div class="overlay"><p>Gallery 24</p></div>
+      </article>
+      <article class="gallery-item" data-category="nature" data-title="Gallery 25" tabindex="0">
+        <img src="images/image-25.jpg" alt="Gallery 25" />
+        <div class="overlay"><p>Gallery 25</p></div>
+      </article>
+      <article class="gallery-item" data-category="architecture" data-title="Gallery 26" tabindex="0">
+        <img src="images/image-26.jpg" alt="Gallery 26" />
+        <div class="overlay"><p>Gallery 26</p></div>
+      </article>
+      <article class="gallery-item" data-category="people" data-title="Gallery 27" tabindex="0">
+        <img src="images/image-27.jpg" alt="Gallery 27" />
+        <div class="overlay"><p>Gallery 27</p></div>
+      </article>
+      <article class="gallery-item" data-category="abstract" data-title="Gallery 28" tabindex="0">
+        <img src="images/image-28.jpg" alt="Gallery 28" />
+        <div class="overlay"><p>Gallery 28</p></div>
+      </article>
+      <article class="gallery-item" data-category="nature" data-title="Gallery 29" tabindex="0">
+        <img src="images/image-29.jpg" alt="Gallery 29" />
+        <div class="overlay"><p>Gallery 29</p></div>
+      </article>
+      <article class="gallery-item" data-category="architecture" data-title="Gallery 30" tabindex="0">
+        <img src="images/image-30.jpg" alt="Gallery 30" />
+        <div class="overlay"><p>Gallery 30</p></div>
+      </article>
+      <article class="gallery-item" data-category="people" data-title="Gallery 31" tabindex="0">
+        <img src="images/image-31.jpg" alt="Gallery 31" />
+        <div class="overlay"><p>Gallery 31</p></div>
+      </article>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="closeLightbox" aria-label="Close lightbox">×</button>
+    <div class="lightbox-content">
+      <button class="lightbox-nav" id="lightboxPrev" aria-label="Previous image">‹</button>
+      <div class="lightbox-image-wrap">
+        <img id="lightboxImage" src="" alt="" />
+        <p id="lightboxCaption"></p>
+      </div>
+      <button class="lightbox-nav" id="lightboxNext" aria-label="Next image">›</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
